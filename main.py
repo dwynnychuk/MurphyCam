@@ -14,4 +14,4 @@ class Murphycam:
 
     def __init__(self):
         """Initialize the project"""
-        Treat(1)
+        t1=Treat
