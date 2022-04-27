@@ -1,20 +1,17 @@
-# Initial script to run camera
+# Main code
 # April 2022
 
 # import
 from tabnanny import check
 import cv2
+import RPi.GPIO as GPIO
+import time
 
-# access camera and display image. ESC key to stop
-cam = cv2.VideoCapture(0)
+from treat import Treat
 
-while True:
-    check, frame = cam.read()
-    cv2.imshow('Video', frame)
+class Murphycam:
+    """Main class for project"""
 
-    key = cv2.waitKey(1)
-    if key == 27:
-        break
-
-cam.release()
-cv2.destroyAllWindows()
+    def __init__(self):
+        """Initialize the project"""
+        Treat(1)
